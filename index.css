@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Neucha&family=Parisienne&family=Poppins:wght@200;300;400;500;600&family=Roboto:wght@300;400&family=Ubuntu&display=swap');
+
+html, body, * {
+  margin: 0;
+  padding: 0;
+  border-box: box-sizing;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #e9e9e9;
+}
+
+/* *** HEADER START *** */
+
+#header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+
+#header div {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  transition: 0.4s;
+}
+
+#header div:hover {
+  color: gray;
+}
+
+#header div span {
+  margin-left: 4px;
+  font-size: 30px;
+}
+
+#header div span, header div img {
+  cursor: pointer;
+}
+
+#header nav {
+  width: 50%;
+  transition: 0.4s;
+}
+
+.nav-active {
+  background-color: white;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#header nav ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+#header nav ul li a {
+  text-decoration: none;
+  color: black;
+  transition: 0.4s;
+}
+
+#header nav ul li a:hover {
+  font-size: 1.2rem;
+  border-bottom: 2px solid gray;
+}
+
+@media (max-width: 1200px) {
+  #header {
+    flex-direction: column;
+    jutify-content: center;
+    height: 90px;
+  }
+}
+
+@media (max-width: 999px) {
+  #header div {
+    padding-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  header nav {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  #header nav ul{
+    display: flex;
+    flex-direction: column;
+  }
+  #header {
+    height: 150px;
+  }
+}
+
+@media (max-width: 508px) {
+  #header div {
+    text-align: center;
+  }
+  #header div img {
+    display: none;
+  }
+}
+
+@media (max-width: 458px) {
+  #header {
+    height: 200px;
+  }
+}
+
+/* *** HEADER END *** */
+
+/* *** MAIN START *** */
+
+#main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* *** PRESENTATION START *** */
+
+#presentation {
+  margin-top: 200px;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+}
+
+#presentation div{
+  display: flex;
+  align-item: column;
+  justify-content: center;
+}
+
+#info {
+  margin-bottom: 20px;
+}
+
+#info-service {
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 110px;
+  position: relative;
+}
+
+#info-service p {
+  margin-left: 20px;
+}
+
+#info-service p {
+  font-size: 1.5rem;
+}
+
+#info-video iframe{
+  
+}
+
+@media (max-width: 900px) {
+  #presentation {
+  margin-top: 200px;
+  }
+}
+
+@media (max-width: 709px) {
+  #info-service {
+    text-align: center;
+  }
+  #info-service img {
+    display: none;
+  }
+}
+
+/* *** PRESENTATION END *** */
+
+/* *** FORMATIONS START *** */
+
+#formations {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.card {
+  width: 20%;
+  min-height: 400px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  box-shadow: 10px 5px 5px gray;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card h5 {
+  font-size: 1.5rem;
+  color: red;
+}
+
+.card p {
+  display:flex;
+  align-items: center;
+}
+
+.card p span {
+  margin-left: 5px;
+}
+
+.card button {
+  width: 80%;
+  border: none;
+  height: 20px;
+  background-color: #363333;
+  color: white;
+  border-radius: 15px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.card button:hover {
+  transform: scale(1.1);
+  background-color: gray;
+  color: black;
+}
+
+@media (max-width: 800px) {
+  #formations {
+    flex-direction: column;
+  }
+  .card {
+    width: 50%;
+  }
+}
+
+/* *** FORMATIONS END *** */
+
+/* *** FORM START *** */
+
+#form {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+#form input {
+  margin: 10px 0;
+  min-width: 30%;
+  height: 25px;
+  border-radius: 5px;
+  padding: 0 5px;
+  border: none;
+  box-shadow: 3px 5px 5px gray;
+}
+
+#form button {
+  margin-top: 10px;
+  min-width: 31%;
+  height: 28px;
+  border-radius: 5px;
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg,      rgba(0,0,0,1) 0%, rgba(207,205,202,1)     79%);
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#form button:hover {
+  transform: scale(1.05);
+}
+
+/* *** FORM END *** */
+
+/* *** MAIN END *** */
+
+/* *** FOOTER START *** */
+
+#footer {
+  margin-top : 20px;
+  padding:10px 0;
+  width: 100%;
+}
+
+#footer #ff {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#footer a {
+  color: black;
+}
+
+#footer #copyright {
+  width: 100%;
+  text-align: center;
+}
+
+/* *** FOOTER END *** */
